@@ -11,9 +11,9 @@ namespace UserManagmentAPI.Business.Concrete
     public class UserService : IUsersServices
     {
         private IUserRepository _usersRepository;
-        public UserService()
+        public UserService(IUserRepository usersRepository)
         {
-             _usersRepository =new UserRepository();
+             _usersRepository = usersRepository;
         }
         public User CreateUser(User user)
         {

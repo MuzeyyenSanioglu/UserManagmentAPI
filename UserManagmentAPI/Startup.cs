@@ -10,6 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UserManagmentAPI.Business.Abstract;
+using UserManagmentAPI.Business.Concrete;
+using UserManagmentAPI.DataAccess.Abstract;
+using UserManagmentAPI.DataAccess.Concrete;
 
 namespace UserManagmentAPI
 {
@@ -26,6 +30,8 @@ namespace UserManagmentAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IUsersServices, UserService>();
+            services.AddSingleton<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

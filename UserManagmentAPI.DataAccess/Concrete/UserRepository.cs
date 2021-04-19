@@ -50,6 +50,7 @@ namespace UserManagmentAPI.DataAccess.Concrete
             using (UserDbContext _context = new UserDbContext())
             {
                 _context.Users.Update(user);
+                _context.SaveChanges();
                 return user;
             }
         }

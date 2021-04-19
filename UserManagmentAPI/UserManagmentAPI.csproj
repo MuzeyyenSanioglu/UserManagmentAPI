@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserManagmentAPI.Business\UserManagmentAPI.Business.csproj" />
+    <ProjectReference Include="..\UserManagmentAPI.Entities\UserManagmentAPI.Entities.csproj" />
+  </ItemGroup>
+
 
 </Project>
