@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UserManagmentAPI.Business.Abstract;
 using UserManagmentAPI.Business.Concrete;
+using UserManagmentAPI.Business.Model;
 using UserManagmentAPI.Entities;
 
 namespace UserManagmentAPI.Controllers
@@ -23,7 +24,7 @@ namespace UserManagmentAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public List<User> Get()
+        public List<User> Read()
         {
             return _usersServices.GetAllUsers();
         }
@@ -33,7 +34,7 @@ namespace UserManagmentAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public User Get(int id)
+        public User Read(int id)
         {
             return _usersServices.GetUserByID(id);
         }
@@ -43,7 +44,7 @@ namespace UserManagmentAPI.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost]
-        public User Post([FromBody]User user)
+        public User Create([FromBody]UserServiceModel user)
         {
             return _usersServices.CreateUser(user);
         }
@@ -53,7 +54,7 @@ namespace UserManagmentAPI.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPut]
-        public User Put([FromBody] User user)
+        public User Update([FromBody]UserServiceModel user)
         {
             return _usersServices.UpdateUser(user);
         }

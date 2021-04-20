@@ -1,13 +1,16 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UserManagmentAPI.Entities
 {
     public class User
     {
         [Key]
-        public long ID { get; set; }
-        
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+        public long SingleID { get; set; }
+
         [StringLength(50)]
         public string Name { get; set; }
         [StringLength(50)]

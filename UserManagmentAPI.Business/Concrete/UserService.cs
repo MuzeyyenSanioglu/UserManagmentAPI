@@ -26,7 +26,7 @@ namespace UserManagmentAPI.Business.Concrete
         public User CreateUser(UserServiceModel usr)
         {
             User user = new User();
-            user.ID = CreateSingleID();
+            user.SingleID = CreateSingleID();
             user.CreationDate = DateTime.Now;
             user.LastModifiedDate = DateTime.Now;
             user.Name = usr.Name;
@@ -82,8 +82,8 @@ namespace UserManagmentAPI.Business.Concrete
             }
             int ten = ((odd * 7) - dble) % 10;
             int eleven = (odd + dble + ten) % 10;
-            num = (num * 1000000000) + ten;
-            return (num * 10000000000) + eleven;
+            long last = Convert.ToInt64(num)*100+ten*10+eleven;
+            return last;
         }
 
         #endregion

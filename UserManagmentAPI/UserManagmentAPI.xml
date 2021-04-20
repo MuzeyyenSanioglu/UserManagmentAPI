@@ -4,27 +4,27 @@
         <name>UserManagmentAPI</name>
     </assembly>
     <members>
-        <member name="M:UserManagmentAPI.Controllers.UsersController.Get">
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Read">
             <summary>
             Get all users
             </summary>
             <returns></returns>
         </member>
-        <member name="M:UserManagmentAPI.Controllers.UsersController.Get(System.Int32)">
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Read(System.Int32)">
             <summary>
             Get user by ıd
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:UserManagmentAPI.Controllers.UsersController.Post(UserManagmentAPI.Entities.User)">
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Create(UserManagmentAPI.Business.Model.UserServiceModel)">
             <summary>
             Create  user
             </summary>
             <param name="user"></param>
             <returns></returns>
         </member>
-        <member name="M:UserManagmentAPI.Controllers.UsersController.Put(UserManagmentAPI.Entities.User)">
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Update(UserManagmentAPI.Business.Model.UserServiceModel)">
             <summary>
             Update the user
             </summary>

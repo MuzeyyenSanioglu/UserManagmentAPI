@@ -21,9 +21,9 @@ namespace UserManagmentAPI.DataAccess.Migrations
 
             modelBuilder.Entity("UserManagmentAPI.Entities.User", b =>
                 {
-                    b.Property<long>("ID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
@@ -42,6 +42,9 @@ namespace UserManagmentAPI.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<long>("SingleID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Surname")
                         .HasMaxLength(50)
