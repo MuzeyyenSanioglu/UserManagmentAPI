@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserManagmentAPI</name>
+    </assembly>
+    <members>
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Get">
+            <summary>
+            Get all users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Get user by ıd
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Post(UserManagmentAPI.Entities.User)">
+            <summary>
+            Create  user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Put(UserManagmentAPI.Entities.User)">
+            <summary>
+            Update the user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UserManagmentAPI.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete the user
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>

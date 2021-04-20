@@ -32,6 +32,12 @@ namespace UserManagmentAPI
             services.AddControllers();
             services.AddSingleton<IUsersServices, UserService>();
             services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSwaggerDocument(c =>
+            {
+                c.PostProcess = ( s => {
+                    s.Info.Title = "User Managment API";
+                });
+            }) ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +51,8 @@ namespace UserManagmentAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

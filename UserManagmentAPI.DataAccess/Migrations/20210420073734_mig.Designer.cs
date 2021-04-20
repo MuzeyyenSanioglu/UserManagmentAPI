@@ -10,7 +10,7 @@ using UserManagmentAPI.DataAccess;
 namespace UserManagmentAPI.DataAccess.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20210419074902_mig")]
+    [Migration("20210420073734_mig")]
     partial class mig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,9 +23,9 @@ namespace UserManagmentAPI.DataAccess.Migrations
 
             modelBuilder.Entity("UserManagmentAPI.Entities.User", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")

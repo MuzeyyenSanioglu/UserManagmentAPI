@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
-namespace UserManagmentAPI.Entities
+namespace UserManagmentAPI.Business.Model
 {
-    public class User
-    {
-        [Key]
-        public long ID { get; set; }
-        
+     public class UserServiceModel
+     {
         [StringLength(50)]
         public string Name { get; set; }
         [StringLength(50)]
@@ -15,7 +14,5 @@ namespace UserManagmentAPI.Entities
         public DateTime Birthday { get; set; }
         [StringLength(250)]
         public string Address { get; set; }
-        public DateTime LastModifiedDate { get; set; }
-        public DateTime CreationDate { get; set; }
-    }
+     }
 }

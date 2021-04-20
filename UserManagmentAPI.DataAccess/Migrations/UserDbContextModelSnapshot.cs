@@ -21,9 +21,9 @@ namespace UserManagmentAPI.DataAccess.Migrations
 
             modelBuilder.Entity("UserManagmentAPI.Entities.User", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<long>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
